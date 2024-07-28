@@ -1,6 +1,6 @@
-# KLIKMO - TikTok Video Downloader
+# KLEKMOT - TikTok Video Downloader
 
-Welcome to **KLIKMO**, your ultimate destination for downloading TikTok videos without watermarks. Experience the easiest and fastest way to save your favorite TikTok videos directly to your devices with just a few clicks.
+Welcome to **KLEKMOT**, your ultimate destination for downloading TikTok videos without watermarks. Experience the easiest and fastest way to save your favorite TikTok videos directly to your devices with just a few clicks.
 
 ## 🌟 Features
 
@@ -15,12 +15,12 @@ Welcome to **KLIKMO**, your ultimate destination for downloading TikTok videos w
 2. **Search for the video** you want to download or select it from your feed.
 3. **Click the Share button** at the bottom right (for Android) or as appropriate for other platforms.
 4. **Copy the link** of the video.
-5. **Paste your download link** into the field on [KLIKMO](https://klikmo-a2330.web.app/) and click the **Download** button.
+5. **Paste your download link** into the field on [KLEKMOT](https://KLEKMOT-a2330.web.app/) and click the **Download** button.
 6. **Wait for our server** to process your request, then save the video to your device.
 
 ## 🔗 Visit Us
 
-Check out our website: [KLIKMO](https://klikmo-a2330.web.app/)
+Check out our website: [KLEKMOT](https://KLEKMOT-a2330.web.app/)
 
 ## 🛠️ Technologies Used
 
@@ -30,8 +30,8 @@ Check out our website: [KLIKMO](https://klikmo-a2330.web.app/)
 
 ## 📧 Contact
 
-If you have any questions or feedback, feel free to reach out to us at support@klikmo.com.
+If you have any questions or feedback, feel free to reach out to us at support@KLEKMOT.com.
 
 ---
 
-Thank you for choosing KLIKMO! Enjoy seamless and watermark-free TikTok video downloads.
+Thank you for choosing KLEKMOT! Enjoy seamless and watermark-free TikTok video downloads.
