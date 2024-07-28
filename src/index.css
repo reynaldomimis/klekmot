@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Chakra Petch", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: #17191b;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 14px;
+}
+
+.focus-ring-gradient:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px transparent,
+    0 0 0 4px linear-gradient(to right, #34d399, #3b82f6, #8b5cf6);
+}
+
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Adjust the thickness of the border */
+  background: linear-gradient(
+    to right,
+    #22c55e,
+    #3b82f6,
+    #a855f7
+  ); /* Same gradient as the logo */
+}
+
+.styled-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(
+    to right,
+    #22c55e,
+    #3b82f6,
+    #a855f7
+  ); /* Gradient from the toolbar border */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 50px; /* Add top margin */
+  transition: background 0.3s;
+}
+
+.styled-button:before,
+.styled-button:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #ffeb3b;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  top: -5px;
+  left: -5px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.styled-button:before {
+  border-color: #22c55e transparent transparent transparent;
+}
+
+.styled-button:after {
+  border-color: transparent transparent #a855f7 #a855f7;
+}
+
+.styled-button:hover:before,
+.styled-button:hover:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.styled-button:hover {
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #a855f7,
+    #22c55e
+  ); /* Hover gradient */
+}
+
+.styled-button.disabled,
+.styled-button.disabled:hover {
+  background: #013109;
+  color: white;
+  cursor: not-allowed;
+}
+
+.styled-button.disabled:before,
+.styled-button.disabled:after {
+  display: none;
 }
