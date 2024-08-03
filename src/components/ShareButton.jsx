@@ -22,7 +22,7 @@ const ShareButton = ({ url, title, text }) => {
   return (
     <button
       onClick={handleShare}
-      className="p-2 px-3 rounded-full  hover:bg-blue-600 text-white"
+      className="p-2 px-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white"
       aria-label="Share"
     >
       <FontAwesomeIcon icon={faShareAlt} />

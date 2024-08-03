@@ -6,7 +6,7 @@ const Footer = ({ openDialog }) => {
       <div className="max-w-7xl mx-auto px-5 flex flex-col xs:flex-col-reverse justify-between items-center">
         <div className="order-2 xs:order-1 mt-4 xs:mt-4">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} KLIKMO. All rights reserved.
+            &copy; {new Date().getFullYear()} KLEKMOT. All rights reserved.
           </p>
         </div>
         <div className="flex flex-col xs:flex-row space-y-2 xs:space-y-0 xs:space-x-6 order-1 xs:order-2">
