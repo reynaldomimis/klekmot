@@ -1,35 +1,17 @@
 import React, { useState } from "react";
 import DownloadButton from "../components/DownloadButton";
+import { DownloadAPIVideo } from "../controller/APIController";
 
 const Main = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({ message: "", type: "" });
-
   const handleDownload = async () => {
     if (url) {
       setLoading(true);
       try {
         const apiUrl = `https://${process.env.REACT_APP_API_URL}`;
-        const response = await fetch(`${apiUrl}?url=${url}`);
-
-        if (!response.ok)
-          throw new Error("Failed to download video from Tiktok");
-        const result = await response.json();
-        const videoUrl = result.video.noWatermark;
-        const videoTitle = result.title || "downloaded_video";
-
-        const videoResponse = await fetch(videoUrl);
-        if (!videoResponse.ok) throw new Error("Failed to fetch video");
-
-        const blob = await videoResponse.blob();
-        const downloadLink = document.createElement("a");
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = `${videoTitle}.mp4`;
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        URL.revokeObjectURL(downloadLink.href);
-
+        await DownloadAPIVideo(url, apiUrl);
         setAlert({
           type: "success",
           message: "Video downloaded successfully.",
@@ -48,6 +30,7 @@ const Main = () => {
         message: "Required URL to download the video",
       });
     }
+
     // Close the alert after 3 seconds
     setTimeout(() => {
       setAlert({ type: "", message: "" });

@@ -13,9 +13,6 @@ const ShareButton = ({ url, title, text }) => {
           url,
         })
         .catch(console.error);
-    } else {
-      // Fallback logic
-      alert("Share functionality is not supported on this device.");
     }
   };
 

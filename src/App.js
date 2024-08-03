@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Loading from "react-loading";
 import TermsDialog from "./components/TermsDialog";
 import PrivacyPolicyDialog from "./components/PrivacyPolicyDialog";
 import DonateDialog from "./components/DonateDialog";
@@ -8,6 +9,7 @@ import Main from "./pages/Main";
 import Steps from "./pages/Steps";
 import Toolbar from "./pages/Toolbar";
 import Description from "./pages/Description";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const App = () => {
   const [dialogStates, setDialogStates] = useState({
@@ -15,6 +17,15 @@ const App = () => {
     donate: false,
     privacyPolicy: false,
   });
+  const [loading, setLoading] = useState(true);
+  D;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Open dialog by setting its state to true
   const openDialog = (dialog) => {
@@ -33,38 +44,39 @@ const App = () => {
   };
 
   return (
-    // <div className="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200">
-    //   <nav className="w-full fixed top-0 bg-white">
-    //     <div className="container mx-auto py-5 flex items-center justify-between">
-    //       <h1>LOGO</h1>
-    //       <button>SHARE</button>
-    //     </div>
-    //   </nav>
-    // </div>
     <div className="min-h-screen bg-[#17191B] text-white">
-      {/* Header Section */}
-      <Toolbar
-        page={window.location.href} // Example page URL
-        title="KLIKMO"
-        text="Check out this awesome TikTok downloader!"
-      />
-      <Main />
-      <Steps />
-      <Description />
-      <Faq />
-      <Footer openDialog={openDialog} />
-      <TermsDialog
-        isOpen={dialogStates.terms}
-        onClose={() => closeDialog("terms")}
-      />
-      <DonateDialog
-        isOpen={dialogStates.donate}
-        onClose={() => closeDialog("donate")}
-      />
-      <PrivacyPolicyDialog
-        isOpen={dialogStates.privacyPolicy}
-        onClose={() => closeDialog("privacyPolicy")}
-      />
+      {loading ? (
+        <div className="flex items-center justify-center h-screen">
+          <Loading type="bubbles" color="#fff" height={100} width={100} />
+        </div>
+      ) : (
+        <>
+          {/* Header Section */}
+          <Toolbar
+            page={window.location.href}
+            title="KLEKMOT"
+            text="Check out this awesome TikTok downloader! Copy this link on any social media to experience downloading TikTok videos without a watermark"
+          />
+          <Main />
+          <Steps />
+          <Description />
+          <Faq />
+          <Footer openDialog={openDialog} />
+          <TermsDialog
+            isOpen={dialogStates.terms}
+            onClose={() => closeDialog("terms")}
+          />
+          <DonateDialog
+            isOpen={dialogStates.donate}
+            onClose={() => closeDialog("donate")}
+          />
+          <PrivacyPolicyDialog
+            isOpen={dialogStates.privacyPolicy}
+            onClose={() => closeDialog("privacyPolicy")}
+          />
+          <ScrollToTopButton />
+        </>
+      )}
     </div>
   );
 };
