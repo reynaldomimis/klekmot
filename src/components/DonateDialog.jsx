@@ -31,7 +31,7 @@ const DonateDialog = ({ isOpen, onClose }) => {
               Support Us
             </h2>
             <p className="text-sm text-gray-400">
-              If you enjoy using Klikmo and would like to support us, you can
+              If you enjoy using KLEKMOT and would like to support us, you can
               buy us a coffee or donate using Bitcoin.
             </p>
           </div>

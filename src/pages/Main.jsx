@@ -54,6 +54,21 @@ const Main = () => {
     }, 3000);
   };
 
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setUrl(text);
+    } catch (error) {
+      setAlert({
+        type: "error",
+        message: "Failed to read from clipboard",
+      });
+      setTimeout(() => {
+        setAlert({ type: "", message: "" });
+      }, 3000);
+    }
+  };
+
   return (
     <main
       className="flex flex-col items-center text-white py-16 pt-44"
@@ -83,7 +98,10 @@ const Main = () => {
             placeholder="Enter TikTok Video Link ..."
             className="w-full px-4 py-2 rounded-l-full text-gray-200 border border-gray-700 bg-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 rounded-r-full"
           />
-          <button className="absolute inset-y-0 right-0 px-4 py-2 bg-gray-800 text-gray-300 rounded-r-full hover:bg-gray-600">
+          <button
+            onClick={handlePaste}
+            className="absolute inset-y-0 right-0 px-4 py-2 bg-gray-800 text-gray-300 rounded-r-full hover:bg-gray-600"
+          >
             📋
           </button>
         </div>

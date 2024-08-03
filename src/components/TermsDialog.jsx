@@ -31,7 +31,7 @@ const TermsDialog = ({ isOpen, onClose }) => {
               className="text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
               style={{ fontFamily: "'Press Start 2P', cursive" }}
             >
-              KLIKMO
+              KLEKMOT
             </div>
           </div>
           <h2 className="text-xl font-semibold text-center mb-4">
@@ -39,11 +39,11 @@ const TermsDialog = ({ isOpen, onClose }) => {
           </h2>
           <div className="h-96 overflow-y-auto p-4 border border-gray-300 rounded">
             <p className="text-sm">
-              By using Klikmo, you agree to the following terms and conditions:
+              By using KLEKMOT, you agree to the following terms and conditions:
               <br />
               <br />
               This document outlines the terms and conditions (“Terms”) under
-              which Klikmo (“we” or “us”) provides its services to you on its
+              which KLEKMOT (“we” or “us”) provides its services to you on its
               websites, including but not limited to the websites listed above
               (collectively, the “Website”). By accessing or using the Website,
               you acknowledge and accept these Terms. The terms “you” or “your”
