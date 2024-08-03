@@ -18,7 +18,6 @@ const App = () => {
     privacyPolicy: false,
   });
   const [loading, setLoading] = useState(true);
-  D;
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
