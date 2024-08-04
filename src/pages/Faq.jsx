@@ -43,12 +43,11 @@ const Faq = () => {
           </details>
           <details className="p-4 border border-gray-600 rounded-lg bg-gray-950">
             <summary className="font-semibold cursor-pointer text-white">
-              Can I use KLEKMOT on my Android phone?
+              Can I use KLEKMOT on my mobile phone?
             </summary>
             <p className="mt-2 text-gray-400">
               Yes, you can use KLEKMOT to save TikTok videos without watermarks
-              on your Android phone. KLEKMOT is fast, free, and regularly
-              updated.
+              on your mobile phone.
             </p>
           </details>
         </div>
