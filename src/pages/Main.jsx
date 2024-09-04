@@ -19,7 +19,7 @@ const Main = () => {
       } catch (error) {
         setAlert({
           type: "error",
-          message: "URL is invalid",
+          message: "URL is Invalid",
         });
       } finally {
         setLoading(false); // Stop loading
