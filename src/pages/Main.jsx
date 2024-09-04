@@ -44,7 +44,7 @@ const Main = () => {
     } catch (error) {
       setAlert({
         type: "error",
-        message: "Failed to read from clipboard",
+        message: "Failed to read/copy from clipboard",
       });
       setTimeout(() => {
         setAlert({ type: "", message: "" });
