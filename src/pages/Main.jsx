@@ -10,7 +10,7 @@ const Main = () => {
     if (url) {
       setLoading(true);
       try {
-        const apiUrl = `https://api.tiklydown.eu.org/api/download`;
+        const apiUrl = `https://${process.env.REACT_APP_API_URL}`;
         await DownloadAPIVideo(url, apiUrl);
         setAlert({
           type: "success",
